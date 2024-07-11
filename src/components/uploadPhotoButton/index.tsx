@@ -42,7 +42,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-4  space-y-4">
+    <div className="flex flex-col items-center justify-center mt-4 space-y-4">
+      {/* Image upload button */}
       <label className="w-32 h-32 cursor-pointer flex items-center Tajawal justify-center bg-gray-200 rounded-full border-2 border-dashed border-gray-400 hover:border-indigo-500 transition-colors">
         {image ? (
           <img
@@ -53,6 +54,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         ) : (
           <span className="text-gray-400">Upload Photo</span>
         )}
+        {/* Input field for file selection */}
         <input
           type="file"
           accept="image/*"
@@ -60,6 +62,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
           onChange={handleImageChange}
         />
       </label>
+      {/* Button to remove uploaded image */}
       {image && (
         <button
           onClick={handleRemoveImage}

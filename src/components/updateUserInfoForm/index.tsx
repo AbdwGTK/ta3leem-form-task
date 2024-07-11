@@ -25,8 +25,11 @@ const FormComponent: React.FC<FormComponentProps> = ({
 
   return (
     <>
+      {/* Language switcher component */}
       <LanguageSwitcher />
+      {/* Title for the form */}
       <h2 className="text-2xl font-bold text-center Tajawal">{t("sign_up")}</h2>
+      {/* Formik form for handling form state and validation */}
       <Formik
         initialValues={initialValues}
         validationSchema={Batata}
@@ -43,12 +46,14 @@ const FormComponent: React.FC<FormComponentProps> = ({
               i18n.language === "ar" ? "text-right" : "text-left"
             }`}
           >
+            {/* Text fields for user input */}
             <TextField label={t("first_name")} name="firstName" />
             <TextField label={t("last_name")} name="lastName" />
             <TextField label={t("email")} name="email" type="email" />
             <TextField label={t("phone_number")} name="phoneNumber" />
             <TextField label={t("address")} name="address" />
             <TextField label={t("city")} name="city" />
+            {/* Upload button for image selection */}
             <UploadButton
               initialImage={initialValues.image} // Pass initial image value for preview
               onImageChange={(image: string | ArrayBuffer | null) =>
@@ -56,6 +61,7 @@ const FormComponent: React.FC<FormComponentProps> = ({
               }
             />
             <div>
+              {/* Submit button */}
               <button
                 type="submit"
                 disabled={isSubmitting}

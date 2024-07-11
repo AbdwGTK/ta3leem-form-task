@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+// Translator configuration
 const resources = {
   en: {
     translation: {
@@ -53,6 +54,7 @@ const resources = {
   },
 };
 
+// Initialize i18next with resources and default language
 i18n.use(initReactI18next).init({
   resources,
   lng: "en", // default language
