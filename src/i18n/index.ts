@@ -26,6 +26,7 @@ const resources = {
       remove: "Remove",
       edit: "Edit",
       profile: "Profile",
+      download_pdf: "Download PDF",
     },
   },
   ar: {
@@ -50,6 +51,7 @@ const resources = {
       remove: "حذف الصورة",
       edit: "تعديل",
       profile: "الملف الشخصي",
+      download_pdf: "التحميل كملف",
     },
   },
 };
