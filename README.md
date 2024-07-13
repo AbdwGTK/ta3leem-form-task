@@ -1,46 +1,88 @@
-# Getting Started with Create React App
+# React Profile Card PDF Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application developed following the precise requirements of the Ta3leem task. It allows users to view a basic profile card and download it as a PDF. The project uses Tailwind CSS for styling and integrates `html2canvas` and `jsPDF` for PDF generation.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [React Profile Card PDF Generator](#react-profile-card-pdf-generator)
+	- [Table of Contents](#table-of-contents)
+	- [Features](#features)
+	- [Installation](#installation)
+	- [Usage](#usage)
+	- [Components](#components)
+		- [Profile](#profile)
+		- [Edit Profile](#edit-profile)
+		- [Generate PDF](#generate-pdf)
+	- [Localization](#localization)
+	- [Styling](#styling)
+	- [Dependencies](#dependencies)
+	- [Limitations](#limitations)
 
-### `yarn start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Display a profile card with user details and an image.
+- Download the profile card as a PDF.
+- Support for multiple languages (i18next integration).
+- Responsive design using Tailwind CSS.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   git clone https://github.com/yourusername/react-profile-card-pdf-generator.git
+   cd react-profile-card-pdf-generator
+   ```
 
-### `yarn build`
+2. Install the dependencies:
+   Yarn
+   ```bash
+   yarn
+   ```
+   NPM
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   yarn start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open your browser and navigate to `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. The profile card will be displayed with user details and an image.
 
-### `yarn eject`
+3. Click the "Download PDF" button to download the profile card as a PDF.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Components
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Profile
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Edit Profile
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Generate PDF
 
-## Learn More
+## Localization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project uses i18next for localization. Update the translation files in the public/locales directory to add or modify translations.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Styling
+
+The project uses Tailwind CSS for styling. Modify the tailwind.config.js file to customize the theme and styles.
+
+## Dependencies
+
+1. React: Frontend library for building user interfaces.
+2. Tailwind CSS: Utility-first CSS framework for styling.
+3. i18next: Internationalization framework for handling translations.
+4. Formik: Form management library.
+5. html2canvas: Library for capturing HTML elements as canvas images.
+6. jsPDF: Library for generating PDF documents in the browser.
+
+## Limitations
+
+The generated PDF is not vectorized but is instead a raster image of the profile card. This limitation arises due to the use of `html2canvas` to capture the HTML content as an image. A better approach is to use a vectorized method using Node.js to handle PDF generation, but it falls out of the scope of the task.
+
+State management is very basic using React local state management that is not sustainable in a real-life application but was chosen based on the simplicity of the requirements.
